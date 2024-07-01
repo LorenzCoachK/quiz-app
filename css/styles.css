@@ -108,3 +108,51 @@ h2 {
 .toggle-input:checked + .toggle-label + .answer + .tags {
   bottom: 10px; /* Fix am unteren Rand mit 10 px Abstand */
 }
+
+/* Styles für die Navigationsleiste */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-top: 2px solid #ccc;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+  text-align: center;
+  color: #333;
+  text-decoration: none;
+  font-size: 24px;
+  cursor: pointer; /* Zeigt eine Hand an, wenn die Maus darüber ist */
+  padding: 10px;
+}
+
+.nav-item .fa-home {
+  color: #87ceeb; /* Hellblauer Farbton für Home-Icon */
+}
+
+.nav-item .fa-bookmark {
+  color: orange; /* Farbe passend zum Bookmark-Icon in den Fragen-Sektionen */
+}
+
+.nav-item .fa-user-circle {
+  color: #87ceeb; /* Hellblauer Farbton für Profil-Icon */
+}
+
+/* Markiert das aktive Nav-Item basierend auf der URL */
+.nav-item:target,
+.nav-item:focus {
+  background-color: #d3d3d3; /* Hellgrauer Hintergrund */
+  border: 2px solid #a9a9a9; /* Dunkelgrauer Rahmen */
+  border-radius: 0; /* Keine abgerundeten Ecken */
+}
+
+.nav-item:hover {
+  background-color: #e0e0e0; /* Hellere graue Farbe beim Hover */
+}
