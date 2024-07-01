@@ -70,18 +70,21 @@ h2 {
   content: attr(data-show-text);
 }
 
-/* Styles für das Bookmark-Icon */
+/* Standardstil für Bookmark-Icon */
 .bookmark-icon {
   position: absolute;
   top: -5%;
   right: 10px;
-  color: orange;
+  color: rgb(247, 201, 183); /* Transparentes Icon */
   border: 2px solid darkorange;
   border-radius: 10%;
   padding: 2px;
   background-color: whitesmoke;
-  font-size: 24px; /* Größe des Icons */
+  font-size: 24px;
 }
+
+.bookmark-icon.active {
+  color: orange; /* Orange Farbe, wenn gebookmarkt */
 
 /* Styles für die Tags */
 .tags {
@@ -110,7 +113,7 @@ h2 {
 }
 
 /* Styles für die Navigationsleiste */
-.bottom-nav {
+.navbar {
   position: fixed;
   bottom: 0;
   left: 0;
