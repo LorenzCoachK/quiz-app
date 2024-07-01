@@ -7,7 +7,7 @@ body {
 header {
   background-color: whitesmoke;
   color: aliceblue;
-  padding: 20px;
+  padding: 0px;
   text-align: center;
   color: black;
 }
@@ -20,4 +20,91 @@ h1 {
   padding: 10px;
   box-sizing: border-box;
   margin: 0;
+}
+
+section {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  min-height: 200px; /* Minimum height for consistency */
+  position: relative;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  margin-top: 10px;
+  border: 2px solid black; /* Schwarzer Rahmen */
+  box-sizing: border-box;
+}
+
+.answer {
+  display: none;
+  margin-top: 40px;
+}
+
+/* Zeigt die Antwort an, wenn das Kontrollkästchen aktiviert ist */
+.toggle-input:checked + .toggle-label + .answer {
+  display: block;
+  margin-bottom: 60px;
+}
+
+/* Ändert den Text der Schaltfläche, wenn das Kontrollkästchen aktiviert ist */
+.toggle-input:checked + .toggle-label::before {
+  content: attr(data-hide-text);
+}
+
+.toggle-label::before {
+  content: attr(data-show-text);
+}
+
+/* Styles für das Bookmark-Icon */
+.bookmark-icon {
+  position: absolute;
+  top: -5%;
+  right: 10px;
+  color: orange;
+  border: 2px solid darkorange;
+  border-radius: 10%;
+  padding: 2px;
+  background-color: whitesmoke;
+  font-size: 24px; /* Größe des Icons */
+}
+
+/* Styles für die Tags */
+.tags {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: calc(100% - 20px); /* Volle Breite minus den Seitenabständen */
+  display: flex;
+  justify-content: flex-start; /* Tags am linken Rand ausrichten */
+  gap: 5px;
+  transition: bottom 0.3s ease;
+}
+
+.tag {
+  background-color: #fff3e0; /* Helles Orange */
+  border: 1px solid orange;
+  padding: 5px;
+  border-radius: 8px;
+  display: inline-block; /* Sicherstellen, dass die Tags nebeneinander angezeigt werden */
+  color: #333; /* Textfarbe */
+  margin-right: 5px;
+}
+
+.toggle-input:checked + .toggle-label + .answer + .tags {
+  bottom: 10px; /* Fix am unteren Rand mit 10 px Abstand */
 }

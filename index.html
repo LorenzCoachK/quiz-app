@@ -1,15 +1,45 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz App</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Beispiel-Header und Fragen</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body>
-<header>
-    <h1>Quiz App</h1>
- <header>
- </body>
+    <header>
+      <h1>Quiz App</h1>
+    </header>
+    <main>
+      <!--- Frage 01 Sektion ---->
+      <section
+        role="region"
+        aria-labelledby="frage1-header"
+        class="question-section"
+      >
+        <h2 id="frage1-header">
+          What property flips the main axes in the flexbox?
+        </h2>
+        <i class="fas fa-bookmark bookmark-icon" aria-hidden="true"></i>
+        <input type="checkbox" id="toggle-answer1" class="toggle-input" />
+        <label
+          for="toggle-answer1"
+          class="toggle-label"
+          data-show-text="Show Answer"
+          data-hide-text="Hide Answer"
+        ></label>
+        <p id="answer1" class="answer">The property is 'flex-direction'.</p>
+        <!-- Tags -->
+        <div class="tags">
+          <span class="tag">#html</span>
+          <span class="tag">#flexbox</span>
+          <span class="tag">#css</span>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
