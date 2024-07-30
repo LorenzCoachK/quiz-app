@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmarks</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: whitesmoke;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .navbar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        background-color: #fff;
+        border-top: 1px solid #ccc;
+        padding: 10px 0;
+      }
+
+      .nav-item {
+        text-align: center;
+        flex-grow: 1;
+        padding: 5px 0;
+      }
+
+      .nav-item i {
+        font-size: 24px;
+      }
+
+      .nav-item:target,
+      .nav-item:focus {
+        background-color: #d3d3d3;
+        border: 2px solid #a9a9a9;
+        border-radius: 0;
+      }
+
+      .nav-item:hover {
+        background-color: #e0e0e0;
+      }
+
+      .nav-item .fa-home {
+        color: #87ceeb;
+      }
+
+      .nav-item .fa-bookmark {
+        color: orange;
+      }
+
+      .nav-item .fa-user-circle {
+        color: #87ceeb;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Quiz App</h1>
+    </header>
+    <main>
+      <!-- verständlicher Kommentar oder Hinweis für diesen Abschnitt -->
+      <!-- Profilbild mit Photo des Users an der linken Seite -->
+      <!-- rechts daneben der Vor- und Nachname des Users in recht großer Schrift -->
+      <!-- ein "about me" Abschnitt und Überschrift dazu-->
+      <!-- zwei Counter: (1) created questions (2) Anzahl bookmarked questions -->
+      <!-- Abschnitt mit "Settings" und einem Dariobutton "Darkmode on / off" -->
+    </main>
+    <nav class="navbar">
+      <a href="index.html#home" class="nav-item">
+        <i class="fas fa-home"></i>
+      </a>
+      <a href="bookmarks.html" class="nav-item">
+        <i class="fas fa-bookmark"></i>
+      </a>
+      <a href="#profile" class="nav-item">
+        <i class="fas fa-user-circle"></i>
+      </a>
+    </nav>
+  </body>
+</html>
